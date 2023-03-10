@@ -10,6 +10,7 @@ namespace program
             DriveInfo[] allDrives = DriveInfo.GetDrives();
             foreach (DriveInfo drive in allDrives)
             {
+                Console.WriteLine(drive.Name);
                 var files = Directory.GetFiles(drive.Name, "*.*", SearchOption.AllDirectories);
 
                 List<string> imageFiles = new List<string>();
