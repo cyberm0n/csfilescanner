@@ -12,21 +12,12 @@ namespace program
             {
                 Console.WriteLine(drive.Name);
                 var files = Directory.GetFiles(drive.Name, "*.*", SearchOption.AllDirectories);
-
-                List<string> imageFiles = new List<string>();
                 foreach (string filename in files)
                 {
                     if (Regex.IsMatch(filename, @"\.jpg$|\.png$|\.rar$|\.txt$|\.exe$|\.gif$"))
-                        imageFiles.Add(filename);
-                }
-
-                foreach (string filenames in imageFiles)
-                {
-                    Console.WriteLine(filenames);
+                        Console.WriteLine(filename);
                 }
             }
-
-
         }
     }
 }
