@@ -1,1 +1,1 @@
-a simple file scanner in pc
+- a simple file scanner in pc
